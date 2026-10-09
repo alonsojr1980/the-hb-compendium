@@ -523,6 +523,9 @@ img.detail__glyph.item-icon { width: 64px; height: 64px; }
 .footer { border-top: 1px solid var(--border); background: rgba(4,6,10,0.6); margin-top: var(--space-8); }
 .footer__inner { max-width: var(--container); margin: 0 auto; padding: var(--space-7) var(--space-5); }
 .footer__brand { display: flex; align-items: center; gap: 10px; color: var(--text-primary); font-weight: 700; margin-bottom: var(--space-4); }
+.footer__author { color: var(--text-secondary); font-size: 13px; margin-bottom: var(--space-3); }
+.footer__author a { color: var(--ps-blue-bright); }
+.footer__author a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .footer__brand small { color: var(--text-tertiary); font-weight: 500; }
 .footer__disclaimer { color: var(--text-tertiary); font-size: 12.5px; max-width: 90ch; line-height: 1.6; }
 .footer__meta { margin-top: var(--space-5); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; color: var(--text-tertiary); font-size: 12.5px; }

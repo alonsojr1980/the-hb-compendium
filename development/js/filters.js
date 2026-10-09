@@ -1,6 +1,6 @@
 /* filters.js — pure functions for search, filtering and sorting. */
 
-import { norm } from './util.js?v=12';
+import { norm } from './util.js?v=13';
 
 export function matchesQuery(item, q) {
   const query = norm(q).trim();

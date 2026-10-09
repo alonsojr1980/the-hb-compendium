@@ -152,7 +152,7 @@ On Windows you can also double-click `development/run_site.bat`.
 - Link to **official / open-source** project pages only.
 - **Do not** host or link ROMs, BIOS files, keys, game dumps or copyrighted packages.
 - All external links must be `https://`.
-- This is an unofficial community project and is not affiliated with any console vendor.
+- A project by [ALONSOJR1980](https://github.com/alonsojr1980); not affiliated with any console vendor.
   All trademarks belong to their respective owners.
 
 ---

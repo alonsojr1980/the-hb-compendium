@@ -2,9 +2,9 @@
 
 import {
   $, el, icon, renderItemIcon, hueFor, compatibility, firmwareLabel, safeHttps, CATEGORY_ICON,
-} from './util.js?v=12';
-import { visibleItems, isFiltering } from './filters.js?v=12';
-import { announce } from './a11y.js?v=12';
+} from './util.js?v=13';
+import { visibleItems, isFiltering } from './filters.js?v=13';
+import { announce } from './a11y.js?v=13';
 
 const STATUSES = ['stable', 'beta', 'alpha', 'experimental', 'discontinued'];
 const badge = (cls, text) => el('span', { class: `badge ${cls}`, text });
@@ -109,6 +109,18 @@ export function renderChrome(state) {
   $('#hero-tagline').textContent = site.tagline || 'A curated, community directory of PlayStation 5 homebrew.';
   $('#footer-disclaimer').textContent = site.disclaimer || '';
   $('#footer-updated').textContent = site.lastUpdated ? `Updated ${site.lastUpdated}` : '';
+
+  // "A project by <name>" — built from DOM nodes (no innerHTML of data).
+  const author = site.author || {};
+  const authorNode = $('#footer-author');
+  if (authorNode) {
+    const url = safeHttps(author.url);
+    const name = author.name || 'ALONSOJR1980';
+    const link = url
+      ? el('a', { href: url, target: '_blank', rel: 'noopener noreferrer', text: name })
+      : document.createTextNode(name);
+    authorNode.replaceChildren(document.createTextNode('A project by '), link);
+  }
 
   const repo = safeHttps(site.repo);
   const repoLink = $('#footer-repo');

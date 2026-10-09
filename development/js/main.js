@@ -1,14 +1,14 @@
 /* main.js — application entry: boot, routing, actions and event wiring. */
 
-import { $, parseFirmware } from './util.js?v=12';
-import { state, setState } from './state.js?v=12';
-import { loadLibrary } from './data.js?v=12';
-import { navigate, parseRoute, onRoute } from './router.js?v=12';
-import { trapFocus } from './a11y.js?v=12';
+import { $, parseFirmware } from './util.js?v=13';
+import { state, setState } from './state.js?v=13';
+import { loadLibrary } from './data.js?v=13';
+import { navigate, parseRoute, onRoute } from './router.js?v=13';
+import { trapFocus } from './a11y.js?v=13';
 import {
   renderChrome, renderNav, renderTopics, renderFeatured, renderToolbar,
   renderGrid, renderDetail, renderSkeletons, renderError, syncFirmwareChip,
-} from './render.js?v=12';
+} from './render.js?v=13';
 
 let menuOpen = false;
 let lastFocus = null;
