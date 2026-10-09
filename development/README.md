@@ -1,13 +1,15 @@
 # The Homebrew Compendium
 
-A static, JSON-driven directory of PlayStation 5 homebrew — emulators, jailbreaks, payloads/tools
+A static, JSON-driven directory of homebrew — emulators, jailbreaks, payloads/tools
 and apps. No framework, no build step. Content lives in a modular JSON library (a manifest plus
 one file per platform and per item).
 
-> A project by [ALONSOJR1980](https://github.com/alonsojr1980). For lawful homebrew on a console you own or are authorized to
-> modify only. This project links to official/open-source pages and does not host ROMs, BIOS
-> files, keys, game dumps or copyrighted packages. Not affiliated with Sony Interactive
-> Entertainment. "PlayStation" and "PS5" are trademarks of Sony Interactive Entertainment.
+> A project by [ALONSOJR1980](https://github.com/alonsojr1980). For lawful homebrew on a console you
+> own or are authorized to modify only. This project links to official/open-source pages and does
+> not host ROMs, BIOS files, keys, game dumps or copyrighted packages. Modifying a console may void
+> warranties, risk account restrictions, or brick the device. Not affiliated with, or endorsed by,
+> any console manufacturer or game publisher. All product names, logos and brands are the property
+> of their respective owners and are used for identification purposes only.
 
 ## Run locally
 

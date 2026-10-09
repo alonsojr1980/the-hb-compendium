@@ -5,7 +5,7 @@
     "tagline": "A curated, community directory of PlayStation 5 homebrew — emulators, jailbreaks, tools and apps.",
     "description": "MOCKUP — simulated prototype data. Versions, dates, authors and firmware ranges are illustrative and unverified. Do not use for real guidance. Item 'icon' values are URLs (developer avatars used as stand-ins) or named words.",
     "lastUpdated": "2026-10-08",
-    "disclaimer": "Mockup prototype. A project by ALONSOJR1980 (https://github.com/alonsojr1980). For lawful homebrew on a console you own or are authorized to modify only. This concept links to official/open-source project pages and does not host ROMs, BIOS files, keys, game dumps, or copyrighted packages. Modifying a console may void warranties, risk account restrictions, or brick the device. Not affiliated with or endorsed by Sony Interactive Entertainment. 'PlayStation' and 'PS5' are trademarks of Sony Interactive Entertainment.",
+    "disclaimer": "Mockup prototype. A project by ALONSOJR1980 (https://github.com/alonsojr1980). For lawful homebrew on a console you own or are authorized to modify only. This concept links to official/open-source project pages and does not host ROMs, BIOS files, keys, game dumps, or copyrighted packages. Modifying a console may void warranties, risk account restrictions, or brick the device. Not affiliated with, or endorsed by, any console manufacturer or game publisher. All product names, logos, and brands are the property of their respective owners and are used for identification purposes only.",
     "repo": "https://github.com/your-user/ps5-homebrew-compendium",
     "defaultFirmwareHint": "13.60"
   },

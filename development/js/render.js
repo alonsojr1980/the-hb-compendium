@@ -2,9 +2,9 @@
 
 import {
   $, el, icon, renderItemIcon, hueFor, compatibility, firmwareLabel, safeHttps, CATEGORY_ICON,
-} from './util.js?v=13';
-import { visibleItems, isFiltering } from './filters.js?v=13';
-import { announce } from './a11y.js?v=13';
+} from './util.js?v=14';
+import { visibleItems, isFiltering } from './filters.js?v=14';
+import { announce } from './a11y.js?v=14';
 
 const STATUSES = ['stable', 'beta', 'alpha', 'experimental', 'discontinued'];
 const badge = (cls, text) => el('span', { class: `badge ${cls}`, text });
@@ -106,7 +106,7 @@ export function renderChrome(state) {
   const site = state.library.site || {};
   document.title = `${site.title || 'The Homebrew Compendium'}`;
   $('#hero-title').textContent = site.title || 'The Homebrew Compendium';
-  $('#hero-tagline').textContent = site.tagline || 'A curated, community directory of PlayStation 5 homebrew.';
+  $('#hero-tagline').textContent = site.tagline || 'A curated, community directory of homebrew.';
   $('#footer-disclaimer').textContent = site.disclaimer || '';
   $('#footer-updated').textContent = site.lastUpdated ? `Updated ${site.lastUpdated}` : '';
 

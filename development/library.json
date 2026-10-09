@@ -2,10 +2,10 @@
   "schemaVersion": "2.0.0",
   "site": {
     "title": "The Homebrew Compendium",
-    "tagline": "A curated, community directory of PlayStation 5 homebrew — emulators, jailbreaks, tools and apps.",
-    "description": "A curated, community directory of PlayStation 5 homebrew. Entries are maintained by hand; versions, dates and firmware ranges may be unverified (see each item's Unverified badge). Item 'icon' values are image URLs or named words.",
+    "tagline": "A curated, community directory of homebrew — emulators, jailbreaks, tools and apps.",
+    "description": "A curated, community directory of homebrew across platforms. Entries are maintained by hand; versions, dates and firmware ranges may be unverified (see each item's Unverified badge). Item 'icon' values are image URLs or named words.",
     "lastUpdated": "2026-10-08",
-    "disclaimer": "For lawful homebrew on a console you own or are authorized to modify only. This project links to official/open-source project pages and does not host ROMs, BIOS files, keys, game dumps, or copyrighted packages. Modifying a console may void warranties, risk account restrictions, or brick the device. Not affiliated with or endorsed by Sony Interactive Entertainment. 'PlayStation' and 'PS5' are trademarks of Sony Interactive Entertainment.",
+    "disclaimer": "For lawful homebrew on a console you own or are authorized to modify only. This project links to official/open-source project pages and does not host ROMs, BIOS files, keys, game dumps, or copyrighted packages. Modifying a console may void warranties, risk account restrictions, or brick the device. Not affiliated with, or endorsed by, any console manufacturer or game publisher. All product names, logos, and brands are the property of their respective owners and are used for identification purposes only.",
     "repo": "https://github.com/alonsojr1980/the-hb-compendium",
     "author": { "name": "ALONSOJR1980", "url": "https://github.com/alonsojr1980" },
     "defaultFirmwareHint": "13.60"
@@ -14,7 +14,7 @@
     {
       "id": "emulators",
       "name": "Emulators",
-      "description": "Native PS5 emulators and multi-system frontends.",
+      "description": "Native emulators and multi-system frontends.",
       "icon": "gamepad",
       "order": 1
     },
