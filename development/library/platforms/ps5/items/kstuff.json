@@ -1,0 +1,30 @@
+{
+  "id": "kstuff",
+  "name": "kstuff",
+  "category": "tools",
+  "icon": "https://github.com/EchoStretch.png?size=200",
+  "summary": "Kernel patching payload that enables homebrew SELF/PKG loading.",
+  "description": "Dynamically patches the PS5 kernel to bypass security checks so homebrew packages can run. Often used together with an application jailbreak for emulators and homebrew titles.",
+  "author": "EchoStretch and contributors",
+  "version": "1.11",
+  "updated": "2026-09-20",
+  "status": "stable",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60"
+  },
+  "tags": [
+    "kernel",
+    "patching",
+    "homebrew"
+  ],
+  "links": {
+    "source": "https://github.com/EchoStretch/kstuff"
+  },
+  "verified": false,
+  "order": 2
+}

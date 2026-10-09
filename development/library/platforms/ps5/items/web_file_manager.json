@@ -1,0 +1,30 @@
+{
+  "id": "web-file-manager",
+  "name": "PS5 Web File Manager",
+  "category": "apps",
+  "icon": "app",
+  "summary": "File manager with a browser-based UI for moving and organizing files.",
+  "description": "A file manager for PS5 that exposes a web UI, letting you browse, move and organize files from a phone or computer on the same network.",
+  "author": "community",
+  "version": "1.10",
+  "updated": "2026-10-05",
+  "status": "stable",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60"
+  },
+  "tags": [
+    "files",
+    "webui",
+    "utility"
+  ],
+  "links": {
+    "source": "https://github.com/itsPLK/ps5-payloads-mirror"
+  },
+  "verified": false,
+  "order": 3
+}

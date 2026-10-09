@@ -1,0 +1,38 @@
+{
+  "id": "xpsemu",
+  "name": "XPSemu",
+  "category": "emulators",
+  "icon": "https://github.com/ZiZc3.png?size=200",
+  "summary": "Original Xbox (2001) emulator via xemu, with RADV Vulkan and cover flow.",
+  "description": "xemu built as a native PS5 app on the RADV Vulkan driver, running the Xbox CPU through a QEMU JIT and the NV2A GPU through xemu's Vulkan renderer. Includes an Xbox-style cover flow with per-game settings and in-memory patches.",
+  "author": "ZiZc3",
+  "version": "1.0",
+  "updated": "2026-10-05",
+  "status": "beta",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60"
+  },
+  "tags": [
+    "xbox",
+    "xemu",
+    "vulkan"
+  ],
+  "links": {
+    "source": "https://github.com/ZiZc3/XPSemu"
+  },
+  "requires": [
+    "etahen",
+    "kstuff",
+    "shadowmountplus"
+  ],
+  "warnings": [
+    "A separate tools ELF handles the app jailbreak."
+  ],
+  "verified": false,
+  "order": 7
+}

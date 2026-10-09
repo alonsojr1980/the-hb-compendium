@@ -1,0 +1,39 @@
+{
+  "id": "ps5x360",
+  "name": "PS5X360",
+  "category": "emulators",
+  "icon": "https://github.com/BrinooTk.png?size=200",
+  "summary": "Experimental Xbox 360 emulator built on Xenia Canary with RADV Vulkan.",
+  "description": "An experimental Xbox 360 emulator for PS5 using Xenia Canary, with DualSense input, native audio and RADV Vulkan. Pulls box art from XboxUnity and supports community Canary patches. Booting a menu is not the same as finishing a level — crashes are expected.",
+  "author": "BrinooTk",
+  "version": "0.5.3-preview",
+  "updated": "2026-10-05",
+  "status": "experimental",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60"
+  },
+  "tags": [
+    "xbox-360",
+    "xenia",
+    "vulkan"
+  ],
+  "links": {
+    "source": "https://github.com/BrinooTk/PS5X360"
+  },
+  "requires": [
+    "etahen",
+    "kstuff",
+    "shadowmountplus"
+  ],
+  "warnings": [
+    "Highly experimental — crashes and visual errors expected.",
+    "First public releases are preview-quality."
+  ],
+  "verified": false,
+  "order": 4
+}

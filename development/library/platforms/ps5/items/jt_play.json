@@ -1,0 +1,30 @@
+{
+  "id": "jt-play",
+  "name": "JT Play",
+  "category": "apps",
+  "icon": "app",
+  "summary": "Media player that browses storage, plays video and audio, and visualizes music.",
+  "description": "A homebrew media player for PS5 that browses storage, plays video and audio files, and includes a visualizer for music playback.",
+  "author": "John Torl",
+  "version": "1.0",
+  "updated": "2026-09-20",
+  "status": "stable",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60"
+  },
+  "tags": [
+    "media",
+    "player",
+    "music"
+  ],
+  "links": {
+    "source": "https://github.com/JohnTorl/JTPlay"
+  },
+  "verified": false,
+  "order": 1
+}

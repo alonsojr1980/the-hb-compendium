@@ -1,0 +1,37 @@
+{
+  "id": "onionhen",
+  "name": "OnionHEN",
+  "category": "tools",
+  "icon": "https://github.com/ps3120.png?size=200",
+  "summary": "Modular all-in-one HEN and toolbox with FTP, game mounting, cheats and an overlay.",
+  "description": "A payload stack that prepares the system, injects a ShellUI toolbox, and runs overlays, cheats, payloads and background services. Includes an embedded FTP server, game scanner/mounter, Remote Play pairing and an in-game performance overlay.",
+  "author": "ps3120",
+  "version": "0.0.13",
+  "updated": "2026-09-11",
+  "status": "beta",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60",
+    "notes": "Requires an external elfldr on port 9021 for the first hop."
+  },
+  "tags": [
+    "hen",
+    "toolbox",
+    "ftp",
+    "cheats",
+    "overlay"
+  ],
+  "links": {
+    "source": "https://github.com/ps3120/onionHEN"
+  },
+  "license": "",
+  "warnings": [
+    "Does not include a kernel exploit; you still need an entry point."
+  ],
+  "verified": false,
+  "order": 4
+}

@@ -1,0 +1,37 @@
+{
+  "id": "snes9x-ps5",
+  "name": "Snes9x PS5",
+  "category": "emulators",
+  "icon": "https://github.com/MisterTemaki.png?size=200",
+  "summary": "A dedicated Super Nintendo app with a 3D cover-flow shelf and multitap support.",
+  "description": "A native port of Snes9x 1.63 as a standalone app with automatic covers, battery saves, save states, cheat files and IPS/UPS/BPS patches. Supports up to four DualSense pads for multitap games. No netplay or rewind.",
+  "author": "MisterTemaki",
+  "version": "2.0",
+  "updated": "2026-10-04",
+  "status": "stable",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60"
+  },
+  "tags": [
+    "super-nintendo",
+    "snes9x",
+    "retro"
+  ],
+  "links": {
+    "source": "https://github.com/MisterTemaki/snes9xPS5"
+  },
+  "requires": [
+    "etahen",
+    "kstuff"
+  ],
+  "warnings": [
+    "No netplay or rewind support."
+  ],
+  "verified": false,
+  "order": 8
+}

@@ -1,0 +1,30 @@
+{
+  "id": "bf-player",
+  "name": "BF Player",
+  "category": "apps",
+  "icon": "app",
+  "summary": "Single-payload media player with subtitles, audio tracks and seeking.",
+  "description": "Installs from a single payload into the media section. Supports seeking, subtitles, audio track selection, volume and aspect-ratio changes from the touchpad and options menus.",
+  "author": "John Torl",
+  "version": "1.0",
+  "updated": "2026-09-22",
+  "status": "beta",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60"
+  },
+  "tags": [
+    "media",
+    "player",
+    "subtitles"
+  ],
+  "links": {
+    "source": "https://github.com/JohnTorl/BFPlayer"
+  },
+  "verified": false,
+  "order": 2
+}

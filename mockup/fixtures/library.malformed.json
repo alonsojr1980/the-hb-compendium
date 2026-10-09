@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0.0",
+  "site": {
+    "title": "PS5 Homebrew Compendium",
+    "tagline": "Malformed demo fixture — this file is intentionally invalid JSON.",
+    "lastUpdated": "2026-10-08",
+    "disclaimer": "Demo fixture used to preview the error state."
+  },
+  "categories": [
+    { "id": "emulators", "name": "Emulators", "icon": "gamepad", "order": 1 }
+  ],
+  "items": [
+    { "id": "broken", "name": "Broken Entry", "category": "emulators" "summary": "missing comma above",
+  ]

@@ -1,0 +1,30 @@
+{
+  "id": "shadowmountplus",
+  "name": "ShadowMountPlus",
+  "category": "tools",
+  "icon": "https://github.com/Drakmor.png?size=200",
+  "summary": "Automated background auto-mounter payload for jailbroken PS5 consoles.",
+  "description": "A background service that scans storage and mounts homebrew and game content automatically, exposing them to the system. Used by most emulators as the content source.",
+  "author": "Drakmor",
+  "version": "1.7beta3",
+  "updated": "2026-10-01",
+  "status": "beta",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60"
+  },
+  "tags": [
+    "mounting",
+    "content",
+    "background"
+  ],
+  "links": {
+    "source": "https://github.com/Drakmor/ShadowMountPlus"
+  },
+  "verified": false,
+  "order": 3
+}

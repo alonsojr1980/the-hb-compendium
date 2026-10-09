@@ -1,0 +1,31 @@
+{
+  "id": "ps5",
+  "name": "PlayStation 5",
+  "shortName": "PS5",
+  "description": "Native PlayStation 5 homebrew — emulators, jailbreaks, tools and apps.",
+  "icon": "gamepad",
+  "thumbnail": "",
+  "browseBG": "linear-gradient(135deg, rgba(2, 19, 47, 0.8), rgba(70, 80, 150, 0.8)), url('assets/platforms/ps5-tile.svg')",
+  "order": 1,
+  "itemFiles": [
+    "ps5_retroarch.json",
+    "prospero_eden.json",
+    "ps5sx2.json",
+    "ps5x360.json",
+    "porpoise.json",
+    "ps5cemu_har.json",
+    "xpsemu.json",
+    "snes9x_ps5.json",
+    "relapse.json",
+    "webkit_autoloader.json",
+    "etahen.json",
+    "kstuff.json",
+    "shadowmountplus.json",
+    "onionhen.json",
+    "zftpd.json",
+    "pkgsvc.json",
+    "jt_play.json",
+    "bf_player.json",
+    "web_file_manager.json"
+  ]
+}

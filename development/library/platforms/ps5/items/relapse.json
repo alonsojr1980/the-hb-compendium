@@ -1,0 +1,37 @@
+{
+  "id": "relapse",
+  "name": "Relapse",
+  "category": "jailbreaks",
+  "icon": "https://github.com/ntfargo.png?size=200",
+  "summary": "Browser + kernel exploit chain for PS5 firmware 7.00–13.60, ending in an ELF loader.",
+  "description": "A public exploit chain combining a WebKit entry point with a kernel bug to obtain kernel read/write and start an ELF loader on port 9021. Firmware 14.00 and above are outside the supported window. The exploit is temporary and must be re-run after a full reboot.",
+  "author": "ntfargo and contributors",
+  "version": "",
+  "updated": "2026-10-03",
+  "status": "stable",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60",
+    "notes": "Only specific builds are supported; check the project's live list."
+  },
+  "tags": [
+    "exploit",
+    "kernel",
+    "webkit"
+  ],
+  "links": {
+    "source": "https://github.com/ntfargo/Relapse-Exploit"
+  },
+  "license": "",
+  "warnings": [
+    "Can hang or kernel-panic the console; may need several attempts.",
+    "A newer system update can close the entry point."
+  ],
+  "verified": false,
+  "featured": true,
+  "order": 1
+}

@@ -1,0 +1,49 @@
+{
+  "id": "ps5-retroarch",
+  "name": "PS5 RetroArch",
+  "category": "emulators",
+  "icon": "https://github.com/mihawk-99.png?size=200",
+  "thumbnails": [
+    "assets/items/ps5-retroarch/01.svg",
+    "assets/items/ps5-retroarch/02.svg",
+    "assets/items/ps5-retroarch/03.svg"
+  ],
+  "summary": "Multi-system libretro frontend with RADV Vulkan rendering and a local WebUI.",
+  "description": "A port of RetroArch to PS5 exposing many libretro cores (Dolphin, LRPS2, PPSSPP, Mupen64Plus-Next, Snes9x, mGBA, Genesis Plus GX and more). Offers an XMB or EmulationStation front screen and a local WebUI for content upload and core settings.",
+  "author": "mihawk-99",
+  "version": "0.6.7-alpha.6",
+  "updated": "2026-10-06",
+  "status": "alpha",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60",
+    "notes": "Depends on an exploit chain and a HEN stack."
+  },
+  "tags": [
+    "retro",
+    "multi-system",
+    "libretro",
+    "vulkan"
+  ],
+  "links": {
+    "source": "https://github.com/mihawk-99/PS5_RetroArch",
+    "releases": "https://github.com/mihawk-99/PS5_RetroArch/releases"
+  },
+  "requires": [
+    "etahen",
+    "kstuff",
+    "shadowmountplus"
+  ],
+  "license": "GPL-3.0",
+  "warnings": [
+    "Alpha software — expect instability.",
+    "Requires your own BIOS/keys for some cores."
+  ],
+  "verified": false,
+  "featured": true,
+  "order": 1
+}

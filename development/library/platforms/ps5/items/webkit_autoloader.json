@@ -1,0 +1,35 @@
+{
+  "id": "webkit-autoloader",
+  "name": "WebKit Autoloader",
+  "category": "jailbreaks",
+  "icon": "https://github.com/itsPLK.png?size=200",
+  "summary": "Host-driven setup that auto-detects firmware and routes to a documented exploit path.",
+  "description": "A host program that guides the exploit setup for supported firmware, routing to the appropriate chain and a payload manager. Maintains a live firmware compatibility list and special routing for certain builds.",
+  "author": "itsPLK",
+  "version": "",
+  "updated": "2026-09-30",
+  "status": "stable",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "1.00",
+    "max": "13.60",
+    "notes": "Routing differs per firmware band; some builds use alternative entry points."
+  },
+  "tags": [
+    "setup",
+    "exploit",
+    "tooling"
+  ],
+  "links": {
+    "source": "https://github.com/itsPLK/ps5-webkit-autoloader",
+    "releases": "https://github.com/itsPLK/ps5-webkit-autoloader/releases"
+  },
+  "warnings": [
+    "Verify your exact firmware build against the project's live list before proceeding."
+  ],
+  "verified": false,
+  "order": 2
+}

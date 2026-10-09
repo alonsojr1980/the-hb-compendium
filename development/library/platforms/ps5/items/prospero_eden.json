@@ -1,0 +1,39 @@
+{
+  "id": "prospero-eden",
+  "name": "ProsperoEden",
+  "category": "emulators",
+  "icon": "https://github.com/blackbearreloaded.png?size=200",
+  "summary": "Unofficial PS5 port of the Eden Nintendo Switch emulator with Vulkan rendering.",
+  "description": "Runs Nintendo Switch software on PS5 via the Eden emulator tree, rendering through RADV Vulkan. Supports internal resolution scaling up to 4x and multiple controllers. Requires the user to supply their own keys, firmware, and game files.",
+  "author": "blackbearreloaded",
+  "version": "1.000.070",
+  "updated": "2026-10-06",
+  "status": "alpha",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60"
+  },
+  "tags": [
+    "nintendo-switch",
+    "vulkan",
+    "emulator"
+  ],
+  "links": {
+    "source": "https://github.com/blackbearreloaded/ProsperoEden"
+  },
+  "requires": [
+    "etahen",
+    "kstuff"
+  ],
+  "warnings": [
+    "Does not include keys or firmware — supply your own lawful dumps.",
+    "Alpha — compatibility varies by title."
+  ],
+  "verified": false,
+  "featured": true,
+  "order": 2
+}

@@ -1,0 +1,40 @@
+{
+  "id": "ps5cemu-har",
+  "name": "PS5CEMU-HAR",
+  "category": "emulators",
+  "icon": "https://github.com/premohq.png?size=200",
+  "summary": "Two Nintendo generations in one app: Cemu for Wii U and Azahar for 3DS.",
+  "description": "Combines Cemu (Wii U) and Azahar (3DS) under one homebrew title. Wii U games run at up to 2160p with graphic packs and GamePad touch on the DualSense touchpad; the 3DS side emulates a New 3DS with save states, cheats and network play.",
+  "author": "premohq",
+  "version": "3.0.0",
+  "updated": "2026-10-05",
+  "status": "beta",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60"
+  },
+  "tags": [
+    "wii-u",
+    "3ds",
+    "cemu",
+    "azahar"
+  ],
+  "links": {
+    "source": "https://github.com/premohq/PS5CEMU-HAR"
+  },
+  "requires": [
+    "etahen",
+    "kstuff",
+    "shadowmountplus"
+  ],
+  "warnings": [
+    "Cemu and Azahar never run at the same time.",
+    "Amiibo dumps must be supplied by the user."
+  ],
+  "verified": false,
+  "order": 6
+}

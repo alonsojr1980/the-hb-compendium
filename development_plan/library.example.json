@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "2.0.0",
+  "site": {
+    "title": "PS5 Homebrew Compendium",
+    "tagline": "A curated, community directory of PlayStation 5 homebrew — emulators, jailbreaks, tools and apps.",
+    "description": "Illustrative manifest example. Items live in each platform's items/ folder; every item should be marked verified=false until re-checked against its official source.",
+    "lastUpdated": "2026-10-08",
+    "disclaimer": "Unofficial community project. For lawful homebrew on a console you own or are authorized to modify only. This project links to official/open-source project pages and does not host ROMs, BIOS files, keys, game dumps, or copyrighted packages. Modifying a console may void warranties, risk account restrictions, or brick the device. Not affiliated with or endorsed by Sony Interactive Entertainment. 'PlayStation' and 'PS5' are trademarks of Sony Interactive Entertainment.",
+    "repo": "https://github.com/your-user/ps5-homebrew-compendium",
+    "defaultFirmwareHint": "13.60"
+  },
+  "categories": [
+    {
+      "id": "emulators",
+      "name": "Emulators",
+      "description": "Native PS5 emulators and multi-system frontends.",
+      "icon": "gamepad",
+      "order": 1
+    },
+    {
+      "id": "jailbreaks",
+      "name": "Jailbreaks & Exploits",
+      "description": "Entry points and exploit chains that enable homebrew. Firmware-specific — read carefully.",
+      "icon": "unlock",
+      "order": 2
+    },
+    {
+      "id": "tools",
+      "name": "Payloads & Core Tools",
+      "description": "Homebrew enablers, loaders, and system utilities.",
+      "icon": "tool",
+      "order": 3
+    },
+    {
+      "id": "apps",
+      "name": "Homebrew Apps & Games",
+      "description": "Media players, file managers, and native homebrew apps.",
+      "icon": "app",
+      "order": 4
+    }
+  ],
+  "redirects": {},
+  "platforms": [
+    "library/platforms/ps5/platform.json"
+  ]
+}

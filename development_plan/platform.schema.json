@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.github.io/ps5-homebrew-compendium/platform.schema.json",
+  "title": "PS5 Homebrew Compendium — Platform",
+  "description": "Schema for a platform definition file at library/platforms/<id>/platform.json. Lists the item files that belong to the platform. Item objects themselves are validated by item.schema.json.",
+  "type": "object",
+  "required": ["id", "name", "itemFiles"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Stable machine id. Attached to every item loaded from this platform as `platformId`."
+    },
+    "name": { "type": "string", "minLength": 1, "description": "Display name, e.g. \"PlayStation 5\"." },
+    "shortName": { "type": "string", "description": "Compact label for chips/badges, e.g. \"PS5\"." },
+    "description": { "type": "string", "description": "One-line summary shown when a platform is introduced." },
+    "icon": {
+      "type": "string",
+      "description": "Named icon key from the app sprite (e.g. gamepad, unlock, tool, app)."
+    },
+    "order": { "type": "integer", "minimum": 0, "description": "Ascending display order across platforms." },
+    "itemFiles": {
+      "type": "array",
+      "minItems": 0,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9_.-]*\\.json$",
+        "description": "Filename within this platform's items/ folder. Convention: item id with hyphens replaced by underscores (ps5-retroarch -> ps5_retroarch.json)."
+      },
+      "description": "ORDERED list of item files. Required because static hosts cannot list a directory."
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "pkgsvc",
+  "name": "PKG Manager",
+  "category": "tools",
+  "icon": "tool",
+  "summary": "Browse and install PKGs from USB, disc or SMB shares on the console.",
+  "description": "A utility to browse and install package files from USB storage, a disc, or an SMB share directly on a jailbroken PS5.",
+  "author": "community",
+  "version": "1.4.1",
+  "updated": "2026-09-27",
+  "status": "stable",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60"
+  },
+  "tags": [
+    "pkg",
+    "installer",
+    "smb"
+  ],
+  "links": {
+    "source": "https://github.com/itsPLK/ps5-payloads-mirror"
+  },
+  "warnings": [
+    "Only install content you are legally entitled to use."
+  ],
+  "verified": false,
+  "order": 6
+}

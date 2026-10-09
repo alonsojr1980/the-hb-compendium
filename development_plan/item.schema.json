@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.github.io/ps5-homebrew-compendium/item.schema.json",
+  "title": "PS5 Homebrew Compendium — Item",
+  "description": "Schema for a single catalog item, stored as one JSON file at library/platforms/<platformId>/items/<name>.json. The file is a BARE item object (no wrapper).",
+  "type": "object",
+  "required": ["id", "name", "category", "summary", "author", "status", "links"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Stable slug used in routes (#/item/<id>). By convention the filename is this id with hyphens -> underscores."
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "category": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Must match a categories[].id in the manifest (cross-checked by tests/validate-library.mjs)."
+    },
+    "icon": {
+      "type": "string",
+      "description": "Card/detail icon. Either a named sprite word (gamepad, unlock, tool, app, search, external, close, chevron, alert, check, cpu, sparkle, shield) OR an image URL/path (https://, //, /, ./, ../). An unknown word or a failed image falls back to the item's category icon."
+    },
+    "summary": { "type": "string", "minLength": 1, "maxLength": 280 },
+    "description": { "type": "string", "description": "Longer detail text. Rendered as plain escaped text (no raw HTML/markdown)." },
+    "author": { "type": "string", "minLength": 1 },
+    "version": { "type": "string", "description": "Human string (e.g. \"0.6.7-alpha.6\"); display only, not compared. Empty string allowed." },
+    "updated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date this entry was last verified/updated by the maintainer. Drives the \"Recently updated\" sort."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["stable", "beta", "alpha", "experimental", "discontinued"],
+      "description": "Stability of the project."
+    },
+    "platform": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["PS5", "PS5 Pro"] },
+      "uniqueItems": true,
+      "description": "Device variants the item supports. Omitted/empty = assume PS5."
+    },
+    "firmware": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "min": { "type": "string", "pattern": "^\\d+\\.\\d{2}$" },
+        "max": { "type": "string", "pattern": "^\\d+\\.\\d{2}$" },
+        "notes": { "type": "string" }
+      },
+      "description": "Inclusive MAJOR.MM compatibility window. Missing bounds mean \"unknown\", not compatible."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+      "uniqueItems": true,
+      "description": "Lowercase hyphenated keywords. Powers search."
+    },
+    "links": {
+      "type": "object",
+      "required": ["source"],
+      "additionalProperties": false,
+      "properties": {
+        "source": { "$ref": "#/$defs/sourceUrl" },
+        "releases": { "$ref": "#/$defs/sourceUrl" },
+        "docs": { "$ref": "#/$defs/sourceUrl" },
+        "video": { "$ref": "#/$defs/sourceUrl" }
+      }
+    },
+    "requires": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+      "uniqueItems": true,
+      "description": "Item ids this project depends on. Resolved to links if present; a missing id is warned and rendered as a non-link badge."
+    },
+    "license": { "type": "string", "description": "SPDX-ish string (e.g. GPL-3.0). Empty string allowed." },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Safety/legal/technical warnings, e.g. \"Requires your own BIOS\"."
+    },
+    "verified": {
+      "type": "boolean",
+      "default": false,
+      "description": "True only after the maintainer re-checked version/links/firmware. Unverified items render an \"Unverified\" badge (RISK-01)."
+    },
+    "featured": { "type": "boolean", "default": false, "description": "Pin to the hero featured rail." },
+    "order": { "type": "integer", "minimum": 0, "description": "Manual order within its category (used by the \"Curated\" sort)." },
+    "platformId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "READ-ONLY, derived: assigned at load time from the containing platform; not persisted in item files."
+    },
+    "media": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "LEGACY (v1) — deprecated. Superseded by the top-level `icon` field and the site banner. Kept for backward compatibility with old inline items; not used by the product.",
+      "properties": {
+        "icon": { "type": "string" },
+        "banner": { "type": "string" },
+        "screenshots": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  },
+  "$defs": {
+    "sourceUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://",
+      "description": "Official/open-source https URL only (DEC-005). The app renders anchors only for https."
+    }
+  }
+}

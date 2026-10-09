@@ -1,0 +1,30 @@
+{
+  "id": "zftpd",
+  "name": "zftpd",
+  "category": "tools",
+  "icon": "tool",
+  "summary": "Zero-copy FTP/HTTP server payload for fast transfers to and from the console.",
+  "description": "A lightweight server payload for moving files to and from a jailbroken PS5 over FTP or HTTP, designed for speed.",
+  "author": "community",
+  "version": "1.6.0",
+  "updated": "2026-09-30",
+  "status": "stable",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60"
+  },
+  "tags": [
+    "ftp",
+    "http",
+    "transfer"
+  ],
+  "links": {
+    "source": "https://github.com/itsPLK/ps5-payloads-mirror"
+  },
+  "verified": false,
+  "order": 5
+}

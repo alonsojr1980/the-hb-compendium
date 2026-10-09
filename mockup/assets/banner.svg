@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600" role="img" aria-labelledby="bannerTitle">
+  <title id="bannerTitle">Abstract PS5-inspired banner: dark cinematic scene with light streaks and an angular emblem</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#04060b"/>
+      <stop offset="0.55" stop-color="#070c16"/>
+      <stop offset="1" stop-color="#0c1626"/>
+    </linearGradient>
+
+    <radialGradient id="glowCyan" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#00bfff" stop-opacity="0.60"/>
+      <stop offset="0.55" stop-color="#0070d1" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#0070d1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowBlue" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#003791" stop-opacity="0.70"/>
+      <stop offset="0.6" stop-color="#003791" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#003791" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowCore" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7fe9ff" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#00bfff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#00bfff" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="slab" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a9f0ff"/>
+      <stop offset="0.32" stop-color="#00bfff"/>
+      <stop offset="0.68" stop-color="#0070d1"/>
+      <stop offset="1" stop-color="#003791"/>
+    </linearGradient>
+    <linearGradient id="slab2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00bfff"/>
+      <stop offset="1" stop-color="#003791"/>
+    </linearGradient>
+
+    <linearGradient id="streakA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00bfff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#00bfff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#00bfff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="streakB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0070d1" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#9beeff" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#0070d1" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.72">
+      <stop offset="0.5" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </radialGradient>
+
+    <pattern id="dots" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="1.6" cy="1.6" r="1.15" fill="#ffffff" fill-opacity="0.10"/>
+    </pattern>
+
+    <filter id="blurXL" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="70"/></filter>
+    <filter id="blurLg" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="34"/></filter>
+    <filter id="blurMd" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="16"/></filter>
+    <filter id="blurSm" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+
+  <!-- base -->
+  <rect width="1600" height="600" fill="url(#bg)"/>
+  <rect width="1600" height="600" fill="url(#dots)"/>
+
+  <!-- ambient glows -->
+  <ellipse cx="1330" cy="70" rx="560" ry="400" fill="url(#glowCyan)" filter="url(#blurXL)"/>
+  <ellipse cx="120" cy="600" rx="640" ry="380" fill="url(#glowBlue)" filter="url(#blurXL)"/>
+  <ellipse cx="1260" cy="270" rx="300" ry="240" fill="url(#glowCore)" opacity="0.35" filter="url(#blurLg)"/>
+
+  <!-- sweeping light streaks -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M-60 520 C 360 468, 640 300, 1000 152 S 1520 22, 1680 66" stroke="url(#streakA)" stroke-width="7" opacity="0.55" filter="url(#blurSm)"/>
+    <path d="M-60 592 C 420 546, 740 386, 1100 250 S 1530 118, 1690 164" stroke="url(#streakB)" stroke-width="3.5" opacity="0.5" filter="url(#blurSm)"/>
+    <path d="M-60 430 C 340 392, 640 250, 1050 122" stroke="url(#streakA)" stroke-width="2" opacity="0.35" filter="url(#blurSm)"/>
+    <path d="M 260 640 C 560 560, 900 470, 1180 320" stroke="url(#streakB)" stroke-width="1.6" opacity="0.3" filter="url(#blurSm)"/>
+  </g>
+
+  <!-- angular emblem (custom, non-trademark) -->
+  <g transform="translate(1136 132) scale(9)">
+    <!-- glow copy -->
+    <g filter="url(#blurMd)" opacity="0.75">
+      <path d="M3 8.5 20 2v22.5L3 28V8.5Z" fill="#00bfff"/>
+      <path d="M22 5.5 29 8v17l-7 2.5V5.5Z" fill="#00bfff"/>
+    </g>
+    <!-- solid slabs -->
+    <path d="M3 8.5 20 2v22.5L3 28V8.5Z" fill="url(#slab)"/>
+    <path d="M22 5.5 29 8v17l-7 2.5V5.5Z" fill="url(#slab2)" opacity="0.95"/>
+    <!-- edge highlight -->
+    <path d="M3 8.5 20 2" fill="none" stroke="#d8f7ff" stroke-width="0.6" opacity="0.85"/>
+    <path d="M22 5.5 29 8" fill="none" stroke="#d8f7ff" stroke-width="0.5" opacity="0.7"/>
+  </g>
+
+  <!-- orbiting ring -->
+  <ellipse cx="1266" cy="264" rx="240" ry="212" fill="none" stroke="#7fe9ff" stroke-width="1" opacity="0.18"/>
+  <ellipse cx="1266" cy="264" rx="300" ry="266" fill="none" stroke="#00bfff" stroke-width="1" opacity="0.10"/>
+
+  <!-- particles -->
+  <g fill="#cdefff">
+    <circle cx="1178" cy="118" r="2.4" opacity="0.9"/>
+    <circle cx="1360" cy="96"  r="1.7" opacity="0.7"/>
+    <circle cx="1428" cy="182" r="2.8" opacity="0.85"/>
+    <circle cx="1104" cy="214" r="1.6" opacity="0.6"/>
+    <circle cx="1490" cy="300" r="2.1" opacity="0.7"/>
+    <circle cx="1290" cy="430" r="2.6" opacity="0.8"/>
+    <circle cx="1150" cy="392" r="1.5" opacity="0.55"/>
+    <circle cx="1010" cy="150" r="1.9" opacity="0.6"/>
+    <circle cx="1530" cy="120" r="1.4" opacity="0.5"/>
+    <circle cx="980"  cy="330" r="2.0" opacity="0.5"/>
+    <circle cx="1246" cy="66"  r="1.6" opacity="0.6"/>
+    <circle cx="1452" cy="430" r="1.8" opacity="0.5"/>
+  </g>
+  <g fill="#00bfff" filter="url(#blurSm)">
+    <circle cx="1178" cy="118" r="3.4" opacity="0.5"/>
+    <circle cx="1428" cy="182" r="4" opacity="0.5"/>
+    <circle cx="1290" cy="430" r="4" opacity="0.45"/>
+  </g>
+
+  <!-- horizon accent -->
+  <rect x="0" y="590" width="1600" height="2" fill="#00bfff" opacity="0.35"/>
+  <rect x="0" y="590" width="1600" height="10" fill="#00bfff" opacity="0.08" filter="url(#blurSm)"/>
+
+  <!-- vignette -->
+  <rect width="1600" height="600" fill="url(#vignette)"/>
+</svg>

@@ -1,0 +1,42 @@
+{
+  "id": "ps5sx2",
+  "name": "PS5SX2",
+  "category": "emulators",
+  "icon": "https://github.com/Swordpdf.png?size=200",
+  "summary": "PCSX2 port with a cover-flow shelf, upscaling, RetroAchievements and patches.",
+  "description": "A PlayStation 2 emulator built as a native PS5 app. Games load as ISO, CHD, CSO or ZSO from a shelf and can be upscaled with 4K output and FSR. Supports HD texture packs, widescreen/60 FPS patches and the emulated network adapter. Requires your own PS2 BIOS.",
+  "author": "Swordpdf",
+  "version": "1.9",
+  "updated": "2026-10-05",
+  "status": "beta",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "6.02",
+    "max": "13.60",
+    "notes": "Tester reports across a wide firmware range."
+  },
+  "tags": [
+    "playstation-2",
+    "pcsx2",
+    "upscaling",
+    "retroachievements"
+  ],
+  "links": {
+    "source": "https://github.com/Swordpdf/PS5SX2"
+  },
+  "requires": [
+    "etahen",
+    "kstuff",
+    "shadowmountplus"
+  ],
+  "warnings": [
+    "Requires your own PS2 BIOS.",
+    "A helper payload jailbreaks the title at launch."
+  ],
+  "verified": false,
+  "featured": true,
+  "order": 3
+}

@@ -1,0 +1,33 @@
+{
+  "id": "etahen",
+  "name": "etaHEN",
+  "category": "tools",
+  "icon": "https://github.com/Gezine.png?size=200",
+  "summary": "All-in-one homebrew enabler payload and toolbox for jailbroken PS5 consoles.",
+  "description": "The homebrew enabler that prepares the system and provides a toolbox for running payloads, mounting homebrew and managing content. Typically paired with kstuff and a game mounter.",
+  "author": "Gezine / LightningMods",
+  "version": "2.5B",
+  "updated": "2026-09-11",
+  "status": "stable",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60"
+  },
+  "tags": [
+    "hen",
+    "enabler",
+    "toolbox"
+  ],
+  "links": {
+    "source": "https://github.com/Gezine/etaHEN"
+  },
+  "warnings": [
+    "Does not include a kernel exploit; an entry point is still required."
+  ],
+  "verified": false,
+  "order": 1
+}

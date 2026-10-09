@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.github.io/ps5-homebrew-compendium/library.schema.json",
+  "title": "PS5 Homebrew Compendium — Library Manifest",
+  "description": "Schema for library.json, the library MANIFEST: site metadata, categories, redirects and the ordered list of platform definition files. Items itself no longer live here (schemaVersion 2.0.0); they live in each platform's items/ folder — see platform.schema.json and item.schema.json. The runtime loader still tolerates legacy flat `itemFiles` and inline `items` manifests for backward compatibility, but those shapes are NOT part of this target schema.",
+  "type": "object",
+  "required": ["schemaVersion", "site", "categories", "platforms"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semver contract version of the library layout. Current: 2.0.0 (platform-based modular content). Minor = additive fields; major = breaking layout/field changes. The app tolerates unknown majors with a warning."
+    },
+    "site": { "$ref": "#/$defs/site" },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/category" },
+      "description": "Topic definitions shared across all platforms."
+    },
+    "redirects": {
+      "type": "object",
+      "description": "Map of old item id -> new item id, so old #/item/<old> deep links keep resolving after a rename.",
+      "additionalProperties": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" }
+    },
+    "platforms": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9._/-]+\\.json$",
+        "description": "Relative path to a platform definition file (e.g. \"library/platforms/ps5/platform.json\")."
+      },
+      "description": "ORDERED list of platform definition files to load. A manifest is required because static hosts cannot list directories."
+    }
+  },
+  "$defs": {
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://",
+      "description": "Only https URLs are accepted; the app renders anchors only for https (NFR-S1)."
+    },
+    "site": {
+      "type": "object",
+      "required": ["title", "lastUpdated", "disclaimer"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "tagline": { "type": "string" },
+        "description": { "type": "string" },
+        "lastUpdated": { "type": "string", "format": "date" },
+        "disclaimer": { "type": "string", "minLength": 1 },
+        "repo": { "$ref": "#/$defs/url" },
+        "defaultFirmwareHint": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d{2}$",
+          "description": "Suggested default firmware value for the compatibility selector, e.g. \"13.60\"."
+        }
+      }
+    },
+    "category": {
+      "type": "object",
+      "required": ["id", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Stable machine id used in routes (#/category/<id>) and item.category."
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "description": { "type": "string" },
+        "icon": {
+          "type": "string",
+          "description": "Named icon key implemented in the app sprite (gamepad, unlock, tool, app, ...). Unknown keys fall back to a default glyph."
+        },
+        "order": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

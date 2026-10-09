@@ -1,0 +1,12 @@
+{
+  "id": "ps5",
+  "name": "PlayStation 5",
+  "shortName": "PS5",
+  "description": "Native PlayStation 5 homebrew — emulators, jailbreaks, tools and apps.",
+  "icon": "gamepad",
+  "order": 1,
+  "itemFiles": [
+    "ps5_retroarch.json",
+    "etahen.json"
+  ]
+}

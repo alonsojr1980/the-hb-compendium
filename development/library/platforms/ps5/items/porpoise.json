@@ -1,0 +1,39 @@
+{
+  "id": "porpoise",
+  "name": "Porpoise",
+  "category": "emulators",
+  "icon": "https://github.com/elripalda.png?size=200",
+  "summary": "Dedicated GameCube and Wii emulator front end for Dolphin on PS5.",
+  "description": "A native Dolphin front end for PS5 with a cover-flow library, box art, memory cards and original menu music. Uses the libretro Dolphin core and a PS5 Vulkan/RADV driver. RetroAchievements are surfaced through the ELF loader.",
+  "author": "elripalda",
+  "version": "1.0",
+  "updated": "2026-10-04",
+  "status": "beta",
+  "platform": [
+    "PS5",
+    "PS5 Pro"
+  ],
+  "firmware": {
+    "min": "7.00",
+    "max": "13.60"
+  },
+  "tags": [
+    "gamecube",
+    "wii",
+    "dolphin",
+    "vulkan"
+  ],
+  "links": {
+    "source": "https://github.com/elripalda/Porpoise"
+  },
+  "requires": [
+    "etahen",
+    "kstuff",
+    "shadowmountplus"
+  ],
+  "warnings": [
+    "Requires the HEN to leave the app sandbox at launch."
+  ],
+  "verified": false,
+  "order": 5
+}

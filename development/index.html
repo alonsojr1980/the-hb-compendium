@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#04060a" />
+  <title>The Homebrew Compendium</title>
+  <meta name="description" content="A curated, community directory of PlayStation 5 homebrew — emulators, jailbreaks, payloads, tools and apps." />
+  <link rel="canonical" href="./" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Homebrew Compendium" />
+  <meta property="og:description" content="A curated, community directory of PlayStation 5 homebrew." />
+  <meta property="og:image" content="assets/banner.png" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <!-- The hero background is painted via CSS (.hero__banner); preload it so the
+       LCP image is discoverable from the initial document instead of after CSS. -->
+  <link rel="preload" as="image" href="assets/banner.svg" fetchpriority="high" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Inline icon sprite (no external assets) -->
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-gamepad" viewBox="0 0 24 24"><path d="M7 8h10a5 5 0 0 1 4.9 5.97l-.5 2.6A3 3 0 0 1 18 19c-1 0-1.6-.5-2.2-1.2L14.6 16H9.4l-1.2 1.8C7.6 18.5 7 19 6 19a3 3 0 0 1-2.9-2.43l-.5-2.6A5 5 0 0 1 7 8Z"/><path d="M8 11v3M6.5 12.5h3M15.5 12h.01M17.5 13.5h.01"/></symbol>
+    <symbol id="i-unlock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 7.8-1.2"/></symbol>
+    <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2.4-.7-.7-2.4 2.4-2.2Z"/></symbol>
+    <symbol id="i-app" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-8 8"/><path d="M19 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h4"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4M12 17h.01"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M9 3v2m3-2v2m3-2v2M9 19v2m3-2v2m3-2v2M3 9h2m-2 3h2m-2 3h2M19 9h2m-2 3h2m-2 3h2"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3Z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.9.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  </svg>
+
+  <header class="topbar" id="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#/" aria-label="The Homebrew Compendium home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M3 8.5 20 2v22.5L3 28V8.5Z"/><path d="M22 5.5 29 8v17l-7 2.5V5.5Z"/></svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__title">The <em>Homebrew</em></span>
+          <span class="brand__sub">Compendium</span>
+        </span>
+      </a>
+
+      <nav class="topnav" id="topnav" aria-label="Topics"></nav>
+
+      <div class="topbar__actions">
+        <button class="searchpill" id="search-focus" type="button" aria-label="Search the compendium">
+          <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+          <span class="searchpill__label">Search</span>
+          <kbd class="searchpill__kbd" aria-hidden="true">/</kbd>
+        </button>
+
+        <button class="fwware" id="fw-chip" type="button" hidden aria-label="Change your firmware version">
+          <span class="fwware__dot" aria-hidden="true"></span>
+          <svg class="icon" aria-hidden="true"><use href="#i-cpu"/></svg>
+          <span id="fw-chip-text"></span>
+        </button>
+
+        <a class="ghosticon" id="source-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Source repository" hidden>
+          <svg class="icon icon--fill" aria-hidden="true"><use href="#i-github"/></svg>
+        </a>
+
+        <button class="menubtn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobilemenu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="topbar__accent" aria-hidden="true"></div>
+    <nav class="mobilemenu" id="mobilemenu" aria-label="Topics" hidden></nav>
+  </header>
+
+  <main id="main">
+    <noscript>
+      <div class="noscript" role="note">
+        <h2>JavaScript is required</h2>
+        <p>
+          This directory builds its pages in the browser. Enable JavaScript to browse the
+          Homebrew Compendium, or read the source data directly in
+          <code>library.json</code> and the files under <code>library/platforms/</code>.
+        </p>
+      </div>
+    </noscript>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__banner" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="hero__eyebrow" id="hero-eyebrow">Community Compendium</p>
+          <h1 class="hero__title" id="hero-title">The Homebrew Compendium</h1>
+          <p class="hero__tagline" id="hero-tagline"></p>
+
+          <dl class="hero__stats" id="hero-stats"></dl>
+
+          <div class="hero__actions">
+            <button class="btn btn--primary" id="hero-cta" type="button">
+              Browse projects <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg>
+            </button>
+            <span class="hero__hint">or press <kbd>/</kbd> to search</span>
+          </div>
+        </div>
+
+        <div class="hero__featured" aria-labelledby="featured-title">
+          <div class="railhead">
+            <h2 id="featured-title" class="railhead__title">
+              <svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg> Featured
+            </h2>
+            <span class="railhead__hint">scroll</span>
+          </div>
+          <div class="rail" id="featured-rail"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="platforms" id="platform-toggle" role="group" aria-label="Platform filter"></div>
+
+    <section class="browse" id="browse" aria-labelledby="browse-title">
+      <h2 id="browse-title" class="sr-only">Browse projects</h2>
+
+      <form class="searchbox searchbox--browse" role="search" id="search-form">
+        <svg class="icon searchbox__icon" aria-hidden="true"><use href="#i-search"/></svg>
+        <input id="search-input" type="search" autocomplete="off" placeholder="Search projects, tags, authors…" aria-label="Search the compendium" />
+        <span class="searchbox__count" id="search-count" aria-hidden="true"></span>
+        <button class="searchbox__clear" id="search-clear" type="button" hidden aria-label="Clear search">
+          <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+        <span class="searchbox__key" aria-hidden="true">/</span>
+      </form>
+
+      <nav class="topics" id="topics" aria-label="Topic filter"></nav>
+
+      <div class="toolbar" id="toolbar">
+        <div class="toolbar__group" role="group" aria-label="Status filter" id="status-chips"></div>
+        <label class="field field--fw">
+          <svg class="icon" aria-hidden="true"><use href="#i-cpu"/></svg>
+          <span class="field__label">Your firmware</span>
+          <input id="firmware-input" inputmode="decimal" placeholder="e.g. 13.60" aria-label="Your PS5 firmware version" />
+        </label>
+        <label class="field field--sort">
+          <span class="field__label">Sort</span>
+          <select id="sort-select" aria-label="Sort projects">
+            <option value="curated">Curated</option>
+            <option value="updated">Recently updated</option>
+            <option value="name">Name (A–Z)</option>
+          </select>
+        </label>
+        <button class="ghostbtn" id="clear-filters" type="button" hidden>Clear filters</button>
+      </div>
+
+      <p class="resultline" id="resultline"></p>
+      <p class="sr-only" id="live" aria-live="polite" role="status"></p>
+
+      <div class="grid" id="grid"></div>
+      <div class="statepanel" id="statepanel" hidden></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark brand__mark--sm" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M3 8.5 20 2v22.5L3 28V8.5Z"/><path d="M22 5.5 29 8v17l-7 2.5V5.5Z"/></svg></span>
+        <span>The Homebrew Compendium</span>
+      </div>
+      <p class="footer__disclaimer" id="footer-disclaimer"></p>
+      <p class="footer__meta">
+        <span id="footer-updated"></span>
+        <span class="footer__sep" aria-hidden="true">•</span>
+        <a id="footer-repo" href="#" target="_blank" rel="noopener noreferrer">Source repository</a>
+        <span class="footer__sep" aria-hidden="true">•</span>
+        <button class="linkbtn" id="show-disclaimer" type="button">Legal &amp; safety</button>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Detail overlay -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__scrim" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+      <button class="iconbtn modal__close" type="button" data-close aria-label="Close details">
+        <svg class="icon"><use href="#i-close"/></svg>
+      </button>
+      <div class="modal__body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Image gallery overlay (opened from a detail thumbnail) -->
+  <div class="gallery" id="gallery" role="dialog" aria-modal="true" aria-label="Image gallery" hidden>
+    <div class="gallery__scrim" data-gallery-close></div>
+    <button class="gallery__nav gallery__nav--prev" id="gallery-prev" type="button" aria-label="Previous image">
+      <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg>
+    </button>
+    <figure class="gallery__figure" tabindex="-1">
+      <img class="gallery__img" id="gallery-img" alt="" decoding="async" />
+      <figcaption class="gallery__caption" id="gallery-caption" aria-live="polite"></figcaption>
+    </figure>
+    <button class="gallery__nav gallery__nav--next" id="gallery-next" type="button" aria-label="Next image">
+      <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg>
+    </button>
+    <button class="iconbtn gallery__close" type="button" data-gallery-close aria-label="Close gallery">
+      <svg class="icon"><use href="#i-close"/></svg>
+    </button>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script type="module" src="js/main.js?v=12"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "site": {
+    "title": "PS5 Homebrew Compendium",
+    "tagline": "Empty-library demo fixture for the mockup.",
+    "lastUpdated": "2026-10-08",
+    "disclaimer": "Demo fixture: valid library.json with zero projects, used to preview the empty state."
+  },
+  "categories": [
+    { "id": "emulators",  "name": "Emulators",             "icon": "gamepad", "order": 1 },
+    { "id": "jailbreaks", "name": "Jailbreaks & Exploits", "icon": "unlock",  "order": 2 },
+    { "id": "tools",      "name": "Payloads & Core Tools", "icon": "tool",    "order": 3 },
+    { "id": "apps",       "name": "Homebrew Apps & Games", "icon": "app",     "order": 4 }
+  ],
+  "redirects": {},
+  "items": []
+}
