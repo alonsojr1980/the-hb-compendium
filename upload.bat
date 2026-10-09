@@ -39,34 +39,63 @@ if errorlevel 1 (
   exit /b 1
 )
 
-if "%~1"=="" (
-  set "MSG=Update library"
-) else (
-  set "MSG=%~1"
-)
+set "BRANCH="
+for /f "delims=" %%b in ('git rev-parse --abbrev-ref HEAD') do set "BRANCH=%%b"
+if "%BRANCH%"=="" set "BRANCH=main"
 
-echo [1/3] Staging all changes...
+set "MSG=%~1"
+if "%MSG%"=="" set "MSG=Update library"
+
+echo [1/4] Staging all changes...
 git add -A
 
-echo [2/3] Committing: "!MSG!"
-git commit -m "!MSG!"
-if errorlevel 1 (
-  echo       [INFO] Nothing to commit - the working tree is already clean.
-)
+echo [2/4] Committing: "%MSG%"
+git commit -m "%MSG%"
+if errorlevel 1 echo       [INFO] Nothing to commit - the working tree is already clean.
 
-echo [3/3] Pushing to origin...
-git push
+echo.
+echo [3/4] Syncing with origin/%BRANCH% (fetch + rebase)...
+git fetch origin
+if errorlevel 1 goto fetch_fail
+
+git rev-parse --verify --quiet "refs/remotes/origin/%BRANCH%" >nul 2>nul
 if errorlevel 1 (
-  echo.
-  echo [ERROR] Push failed. Check the remote and your credentials:
-  echo         git remote -v
-  echo.
-  pause
-  exit /b 1
+  echo       [INFO] origin/%BRANCH% does not exist yet - first push, skipping rebase.
+) else (
+  git pull --rebase origin %BRANCH%
+  if errorlevel 1 goto rebase_fail
 )
 
 echo.
+echo [4/4] Pushing to origin/%BRANCH%...
+git push
+if errorlevel 1 goto push_fail
+goto done
+
+:fetch_fail
+echo.
+echo [ERROR] Could not fetch from origin. Check your network and GitHub credentials
+echo         (see the README for signing in with a browser).
+goto end
+
+:rebase_fail
+echo.
+echo [ERROR] Could not rebase onto origin/%BRANCH% - there is probably a merge conflict.
+echo         Resolve the conflict, then run:  git rebase --continue
+echo         Or keep your local copy and stop the rebase:  git rebase --abort
+goto end
+
+:push_fail
+echo.
+echo [ERROR] Push failed. Check the remote and your credentials:
+echo         git remote -v
+goto end
+
+:done
+echo.
 echo Done. GitHub Pages will rebuild the site from the development/ folder
 echo in a minute or two.
+
+:end
 echo.
 pause
